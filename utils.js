@@ -1,4 +1,5 @@
-import { renderMovie } from "./index.js";
+import { renderMovie, inputmovie } from "./index.js";
+
 let unabletofind = () => {
   {
     let str = "";
@@ -9,4 +10,39 @@ let unabletofind = () => {
   }
 };
 
-export { unabletofind };
+const rendermovie = (movie) => {
+  let str = "";
+  str += ` <div>
+  <div class="name-star">
+    <h3>${movie.Title} 
+     <i class="fa-solid fa-star"></i>
+   <span>${movie.imdbRating}</span>
+    </h3>
+    
+  </div>
+  <div class="time-dramma-watchlist">
+    <p>${movie.Runtime}</p>
+    <p>${movie.Genre}</p>
+    <div>
+    <button id="wishlist-button">+</button>
+    <span>watchlist</span>
+    </div>
+  </div>
+  <div class="plot">
+    <p>${movie.Plot}</p>
+  </div>
+  <div>
+<img class="poster" src="${movie.Poster}" alt="" srcset="">
+  <div/>
+
+</div>
+<hr>`;
+  inputmovie.value = "";
+  renderMovie.innerHTML = str;
+
+  if (movie.Title === undefined) {
+    unabletofind();
+  }
+};
+
+export { unabletofind, rendermovie };
