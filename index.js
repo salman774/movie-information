@@ -1,5 +1,6 @@
 import { unabletofind } from "./utils.js";
 import { clicked } from "./watchlist.js";
+
 let renderMovie = document.getElementById("render-movie-here");
 let inputmovie = document.getElementById("input-movie");
 
@@ -12,6 +13,14 @@ let callapi = () => {
     .then((data) => {
       console.log(data);
       rendermovie(data);
+      if (
+        document
+          .getElementById("wishlist-button")
+          .addEventListener("click", () => {
+            clicked(data);
+          })
+      ) {
+      }
     });
 };
 
@@ -46,7 +55,7 @@ const rendermovie = (movie) => {
 <hr>`;
   inputmovie.value = "";
   renderMovie.innerHTML = str;
-  document.getElementById("wishlist-button").addEventListener("click", clicked);
+
   if (movie.Title === undefined) {
     unabletofind();
   }

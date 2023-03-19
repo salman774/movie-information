@@ -5,10 +5,11 @@
 }
 body {
   margin: auto;
-  width: 90%;
+  width: 94%;
   display: block;
   margin-top: 1.4375em;
   height: auto;
+  max-width: 1800px;
 }
 /* inside header seaction  */
 header {
@@ -26,16 +27,11 @@ header {
 header h3 {
   color: #fefae0;
   text-decoration: none;
-  position: relative;
-  top: -24px;
 }
 
 header a {
   color: #fefae0;
   text-decoration: none;
-  position: relative;
-  top: -24px;
-  left: -8px;
 }
 i {
   height: 30px;
@@ -48,8 +44,8 @@ i {
   justify-content: center;
   max-height: 3.125em;
   position: absolute;
-  top: 148px;
-  left: 66px;
+  left: 4.375rem;
+  top: 140px;
 }
 .search-bar input {
   background-color: #a5a5a5;
@@ -122,4 +118,27 @@ span {
 
 hr {
   margin-top: 12px;
+}
+
+@media (min-width: 491px) {
+  .search-bar {
+    position: absolute;
+    left: 500px;
+    top: 140px;
+  }
+  .poster {
+    margin-top: 20px;
+    position: relative;
+    top: 1px;
+    width: 30%;
+    max-height: 380px;
+  }
+  .time-dramma-watchlist {
+    display: flex;
+    justify-content: space-between;
+    max-width: 210px;
+    color: #fefae0;
+    margin-top: 10px;
+    font-size: 0.875rem;
+  }
 }
