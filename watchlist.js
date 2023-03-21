@@ -1,7 +1,8 @@
-let arrayofmovie = [];
-let clicked = (data) => {
-  arrayofmovie.push(data);
-  console.log(arrayofmovie);
+import { arrayofmovie } from "./index.js";
+let pushDataToArray = (data) => {
+  arrayofmovie.push(data.Title);
+  const jsonData = JSON.stringify(arrayofmovie);
+  localStorage.setItem("myData", jsonData);
 };
 
-export { clicked };
+export { pushDataToArray };

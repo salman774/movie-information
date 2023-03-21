@@ -1,8 +1,10 @@
-import { rendermovie } from "./utils.js";
-import { clicked } from "./watchlist.js";
+import { rendermoviedetailhtml } from "./utils.js";
+import { pushDataToArray } from "./watchlist.js";
 
 let renderMovie = document.getElementById("render-movie-here");
 let inputmovie = document.getElementById("input-movie");
+let leadsfromlocalstorage = JSON.parse(localStorage.getItem("myData"));
+let arrayofmovie = [];
 
 let callapi = () => {
   let moviename = inputmovie.value;
@@ -12,18 +14,29 @@ let callapi = () => {
     })
     .then((data) => {
       console.log(data);
-      rendermovie(data);
-      if (
-        document
-          .getElementById("wishlist-button")
-          .addEventListener("click", () => {
-            clicked(data);
-          })
-      ) {
-      }
+      rendermoviedetailhtml(data);
+      document
+        .getElementById("wishlist-button")
+        .addEventListener("click", () => {
+          pushDataToArray(data);
+          if (
+            document
+              .getElementById("search-button")
+              .addEventListener("click", callapi)
+          ) {
+            callapi();
+          }
+        });
     });
 };
 
+if (leadsfromlocalstorage) {
+  console.log(localStorage.getItem("myData"));
+  arrayofmovie = leadsfromlocalstorage;
+  document.getElementById("search-button").addEventListener("click", callapi);
+}
+
+// document.getElementById("wishlist").addEventListener("click", showmewishlist);
 document.getElementById("search-button").addEventListener("click", callapi);
 
-export { renderMovie, inputmovie };
+export { renderMovie, inputmovie, arrayofmovie };

@@ -10,7 +10,7 @@ let unabletofind = () => {
   }
 };
 
-const rendermovie = (movie) => {
+const rendermoviedetailhtml = (movie) => {
   let str = "";
   str += ` <div>
   <div class="name-star">
@@ -45,4 +45,4 @@ const rendermovie = (movie) => {
   }
 };
 
-export { unabletofind, rendermovie };
+export { unabletofind, rendermoviedetailhtml };
