@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+  color: wheat;
+  max-height: 400px;
+  margin-top: 50px;
+}
+
+.watchlist {
+  height: auto;
+  max-height: 900px;
+}
+
+.poster {
+  max-width: 200px;
+  max-height: 200px;
+}
+/* 
+.name-star {
+  color: #fefae0;
+  margin-top: 48px;
+  font-size: 0.875rem;
+}
+.name-star i,
+span {
+  font-size: 14px;
+  color: white;
+}
+.name-star i {
+  margin-left: 20px;
+  color: white;
+}
+.time-dramma-watchlist {
+  display: flex;
+  justify-content: space-between;
+  color: #fefae0;
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: white;
+}
+.poster {
+  margin-top: 20px;
+  position: relative;
+  top: 1px;
+  width: 40%;
+  max-height: 200px;
+}
+
+.plot {
+  color: #fefae0;
+  margin-top: 12px;
+  font-size: 0.875rem;
+} */
+
+/* str not in our database  */
+/* .not-in-database {
+  margin-top: 120px;
+  color: #fefae0;
+  text-align: center;
+}
+
+hr {
+  margin-top: 22px;
+}
+.render-movie-deail-container {
+  display: flex;
+  gap: 5px;
+}
+.render-movie-deail-container img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.after-image {
+  position: absolute;
+  top: 160px;
+} */
